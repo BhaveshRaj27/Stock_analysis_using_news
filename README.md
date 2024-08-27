@@ -11,7 +11,13 @@
 - Run the command `streamlit run main.py`
 
 **Problem overcome with tools**
-- There are two problems which our LLM Research tool overcome
+- There are two problems which our LLM Research tool overcome:-
     -   Token limit exceed in Chatgpt UI:
-         - 
-    -   Hallucination and Biases
+        - The UI GPT will show the token limit exceeded if we provide more than 1 or 2 articles, Further copy-pasting multiple articles word to word is a tedious 
+          task.
+        - The data is divided into chunks and then converted vectors so we have only extracted parts which are most relatable to a given query.
+        - Further, the Map-reduce method is used, all the semantically similar chunks are fed to a separate LLM instance and their output is then sent to a final LLM 
+          instance to combine them.
+    -   Hallucination and Biases:
+        - After the training cutoff, LLM models don't have information about the  new events happening, therefore they hallucinate the answer for such events. We 
+          have used RAG (Retrieval Augmented Generation) which helped us to mitigate the hallucination in the model
