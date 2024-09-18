@@ -1,4 +1,4 @@
-#LLM Research Tool
+# LLM Research Tool
 - The tool aims to allow the user to query multiple web pages together or summarize them. 
 - The tool takes URLs as input, creates word embeddings  using OpenAI embedding and stores them as vectors in FAISS(work as vector database here).
 - When a user queries the URL, query embedding gets created and a semantic search is performed to find the best matches for the query inside the vector database.
