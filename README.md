@@ -1,6 +1,6 @@
 #LLM Research Tool
 - The tool aims to allow the user to query multiple web pages together or summarize them. 
-- The tool takes URLs as input, creates word embeddings  using OpenAI embedding and stores them as as vectors in FAISS(work as vector database here).
+- The tool takes URLs as input, creates word embeddings  using OpenAI embedding and stores them as vectors in FAISS(work as vector database here).
 - When a user queries the URL, query embedding gets created and a semantic search is performed to find the best matches for the query inside the vector database.
 - The best match + query is fed to the LLM to generate the result.
 
@@ -15,9 +15,12 @@
     -   Token limit exceed in Chatgpt UI:
         - The UI GPT will show the token limit exceeded if we provide more than 1 or 2 articles, Further copy-pasting multiple articles word to word is a tedious 
           task.
-        - The data is divided into chunks and then converted vectors so we have only extracted parts which are most relatable to a given query.
+        - The data is divided into chunks and then converted vectors, so we have only extracted parts most relatable to a given query.
         - Further, the Map-reduce method is used, all the semantically similar chunks are fed to a separate LLM instance and their output is then sent to a final LLM 
           instance to combine them.
     -   Hallucination and Biases:
-        - After the training cutoff, LLM models don't have information about the  new events happening, therefore they hallucinate the answer for such events. We 
-          have used RAG (Retrieval Augmented Generation) which helped us to mitigate the hallucination in the model
+        - After the training cutoff, LLM models don't have information about the  new events happening, therefore they hallucinate the answer for such events. I 
+          We have used RAG (Retrieval Augmented Generation), which helped us mitigate the model's hallucination.
+
+https://github.com/user-attachments/assets/7c954ebe-b440-4079-96cb-6a5b18489c3c
+
