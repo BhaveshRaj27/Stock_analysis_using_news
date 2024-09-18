@@ -22,5 +22,6 @@
         - After the training cutoff, LLM models don't have information about the  new events happening, therefore they hallucinate the answer for such events. I 
           We have used RAG (Retrieval Augmented Generation), which helped us mitigate the model's hallucination.
 
-https://github.com/user-attachments/assets/7c954ebe-b440-4079-96cb-6a5b18489c3c
+
+https://github.com/user-attachments/assets/ddf05ba0-3a35-4ec4-b4e3-b33f1040a96b
 
